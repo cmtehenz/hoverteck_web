@@ -97,7 +97,7 @@ export function Profile() {
                 ))}
               </div>
             </div>
-            <ProfileInfoCard
+            {/* <ProfileInfoCard
               title="Profile Information"
               description="Hi, I'm Alec Thompson, Decisions: If you can't decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
               details={{
@@ -118,12 +118,12 @@ export function Profile() {
                   <PencilIcon className="h-4 w-4 cursor-pointer text-blue-gray-500" />
                 </Tooltip>
               }
-            />
+            /> */}
             <div>
               <Typography variant="h6" color="blue-gray" className="mb-3">
                 Platform Settings
               </Typography>
-              <ul className="flex flex-col gap-6">
+              {/* <ul className="flex flex-col gap-6">
                 {conversationsData.map((props) => (
                   <MessageCard
                     key={props.name}
@@ -135,7 +135,7 @@ export function Profile() {
                     }
                   />
                 ))}
-              </ul>
+              </ul> */}
             </div>
           </div>
           <div className="px-4 pb-4">
