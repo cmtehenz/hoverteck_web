@@ -12,7 +12,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 interface RoutesProps {
   name: string,
   path: string,
-  icon: string
+  icon: React.ForwardRefExoticComponent<React.SVGProps<SVGSVGElement>>
 }
 
 interface NavbarProps {

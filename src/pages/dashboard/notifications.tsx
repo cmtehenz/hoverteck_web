@@ -9,19 +9,19 @@ import {
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
 export function Notifications() {
-  const [showAlerts, setShowAlerts] = React.useState({
+  const [showAlerts, setShowAlerts] = React.useState<any>({
     blue: true,
     green: true,
     orange: true,
     red: true,
   });
-  const [showAlertsWithIcon, setShowAlertsWithIcon] = React.useState({
+  const [showAlertsWithIcon, setShowAlertsWithIcon] = React.useState<any>({
     blue: true,
     green: true,
     orange: true,
     red: true,
   });
-  const alerts = ["blue", "green", "orange", "red"];
+  const alerts: any = ["blue", "green", "orange", "red"];
 
   return (
     <div className="mx-auto my-20 flex max-w-screen-lg flex-col gap-8">
@@ -37,14 +37,14 @@ export function Notifications() {
           </Typography>
         </CardHeader>
         <CardBody className="flex flex-col gap-4 p-4">
-          {alerts.map((color) => (
+          {alerts.map((color: any) => (
             <Alert
               key={color}
               show={showAlerts[color]}
               color={color}
               dismissible={{
                 onClose: () =>
-                  setShowAlerts((current) => ({ ...current, [color]: false })),
+                  setShowAlerts((current: any) => ({ ...current, [color]: false })),
               }}
             >
               A simple {color} alert with an <a href="#">example link</a>. Give
@@ -65,7 +65,7 @@ export function Notifications() {
           </Typography>
         </CardHeader>
         <CardBody className="flex flex-col gap-4 p-4">
-          {alerts.map((color) => (
+          {alerts.map((color: any) => (
             <Alert
               key={color}
               show={showAlertsWithIcon[color]}
@@ -75,7 +75,7 @@ export function Notifications() {
               }
               dismissible={{
                 onClose: () =>
-                  setShowAlertsWithIcon((current) => ({
+                  setShowAlertsWithIcon((current: any) => ({
                     ...current,
                     [color]: false,
                   })),

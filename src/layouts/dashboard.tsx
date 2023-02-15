@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import { parseCookies } from "nookies";
 
 export function Dashboard() {
-  const [controller, dispatch] = useMaterialTailwindController();
+  const [controller, dispatch]= useMaterialTailwindController();
   const { sidenavType } = controller;
   const navigate = useNavigate();
 

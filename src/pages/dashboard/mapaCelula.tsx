@@ -30,7 +30,7 @@ interface ComponentProps {
   time_since_new_component: string;
   time_since_new_engine: string;
   time_since_overhall_component: string;
-  type_frenquency: string;
+  type_frequency: string;
 }
 
 interface SectionProps {
@@ -163,7 +163,7 @@ export function MapaCelula() {
                                   <td className={className}>{component.time_since_new_component}</td>
                                   <td className={className}>{component.time_since_overhall_component}</td>
                                   <td className={className}>{component.frequency}</td>
-                                  <td className={className}>{component.type_frenquency}</td>
+                                  <td className={className}>{component.type_frequency}</td>
                                   <td className={className}>{component.time_serial_new_now}</td>
                                   <td className={className}>{component.time_serial_overhall_now}</td>
                                   <td className={className}>calcular valor</td>

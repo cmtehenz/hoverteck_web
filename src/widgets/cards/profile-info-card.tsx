@@ -6,7 +6,14 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-export function ProfileInfoCard({ title, description, details, action }) {
+interface IProfile {
+  title: string,
+  description: string,
+  details: [],
+  action: string
+}
+
+export function ProfileInfoCard({ title, description, details, action }: IProfile) {
   return (
     <Card color="transparent" shadow={false}>
       <CardHeader
@@ -43,7 +50,7 @@ export function ProfileInfoCard({ title, description, details, action }) {
                 >
                   {el}:
                 </Typography>
-                {typeof details[el] === "string" ? (
+                {/* {typeof details[el] === "string" ? (
                   <Typography
                     variant="small"
                     className="font-normal text-blue-gray-500"
@@ -52,7 +59,7 @@ export function ProfileInfoCard({ title, description, details, action }) {
                   </Typography>
                 ) : (
                   details[el]
-                )}
+                )} */}
               </li>
             ))}
           </ul>

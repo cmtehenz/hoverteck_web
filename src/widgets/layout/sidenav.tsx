@@ -10,7 +10,7 @@ import { useMaterialTailwindController, setOpenSidenav } from "../../context";
 
 interface RoutesProps {
   layout?: string,
-  title: string,
+  title?: string,
   pages: []
 }
 
@@ -23,7 +23,7 @@ interface SidenavProps {
 export function Sidenav({ brandImg, brandName, routes }: SidenavProps) {
   const [controller, dispatch] = useMaterialTailwindController();
   const { sidenavColor, sidenavType, openSidenav } = controller;
-  const sidenavTypes = {
+  const sidenavTypes: any = {
     dark: "bg-gradient-to-br from-blue-gray-800 to-blue-gray-900",
     white: "bg-white shadow-lg",
     transparent: "bg-transparent",
@@ -61,7 +61,7 @@ export function Sidenav({ brandImg, brandName, routes }: SidenavProps) {
         </IconButton>
       </div>
       <div className="m-4">
-        {routes.map(({ layout, visible, title, pages }, key) => (
+        {routes.map(({ layout, title, pages }, key) => (
           <ul key={key} className="mb-4 flex flex-col gap-1">
             {title && (
               <li className="mx-3.5 mt-4 mb-2">

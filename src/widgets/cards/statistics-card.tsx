@@ -7,7 +7,15 @@ import {
 } from "@material-tailwind/react";
 import PropTypes from "prop-types";
 
-export function StatisticsCard({ color, icon, title, value, footer }) {
+interface IStatistics {
+  color: string,
+  icon: string,
+  title: string,
+  value: string,
+  footer: string
+}
+
+export function StatisticsCard({ color, icon, title, value, footer }: IStatistics) {
   return (
     <Card>
       <CardHeader

@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
 import { Avatar, Typography } from "@material-tailwind/react";
 
-export function MessageCard({ img, name, message, action }) {
+interface IMessageCard {
+  img: string,
+  name: string,
+  message: string,
+  action: string
+}
+
+export function MessageCard({ img, name, message, action }: IMessageCard) {
   return (
     <div className="flex items-center justify-between gap-4">
       <div className="flex items-center gap-4">
@@ -27,18 +34,5 @@ export function MessageCard({ img, name, message, action }) {
     </div>
   );
 }
-
-MessageCard.defaultProps = {
-  action: null,
-};
-
-MessageCard.propTypes = {
-  img: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  message: PropTypes.node.isRequired,
-  action: PropTypes.node,
-};
-
-MessageCard.displayName = "/src/widgets/cards/message-card.jsx";
 
 export default MessageCard;
