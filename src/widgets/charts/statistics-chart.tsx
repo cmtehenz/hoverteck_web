@@ -8,7 +8,9 @@ import {
 import PropTypes from "prop-types";
 import Chart from "react-apexcharts";
 
-export function StatisticsChart({ color, chart, title, description, footer }) {
+
+
+export function StatisticsChart({ color, chart, title, description, footer }: any) {
   return (
     <Card>
       <CardHeader variant="gradient" color={color}>
