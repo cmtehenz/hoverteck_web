@@ -8,11 +8,11 @@ import {
 import PropTypes from "prop-types";
 
 interface IStatistics {
-  color: string,
+  color?: string,
   icon: string,
   title: string,
   value: string,
-  footer: string
+  footer: JSX.Element
 }
 
 export function StatisticsCard({ color, icon, title, value, footer }: IStatistics) {
@@ -20,7 +20,7 @@ export function StatisticsCard({ color, icon, title, value, footer }: IStatistic
     <Card>
       <CardHeader
         variant="gradient"
-        color={color}
+        // color={color}
         className="absolute -mt-4 grid h-16 w-16 place-items-center"
       >
         {icon}
