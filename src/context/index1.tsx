@@ -73,9 +73,6 @@ export function useMaterialTailwindController() {
   return context;
 }
 
-MaterialTailwindControllerProvider.displayName = "/src/context/index.tsx";
-
-
 export const setOpenSidenav = (dispatch: (arg: { type: 'OPEN_SIDENAV'; value: any; }) => any, value: any) =>
   dispatch({ type: "OPEN_SIDENAV", value });
 export const setSidenavType = (dispatch: (arg0: { type: string; value: any; }) => any, value: any) =>

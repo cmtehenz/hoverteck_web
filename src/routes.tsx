@@ -1,13 +1,11 @@
 import {
   HomeIcon,
   UserCircleIcon,
-  TableCellsIcon,
-  BellIcon,
   UsersIcon,
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Notifications, Tables, Aircrafts, NewAircraft, MapaEngine, MapaCelula } from "./pages/dashboard";
+import { Home, Profile, Aircrafts, NewAircraft, MapaEngine, MapaCelula } from "./pages/dashboard";
 import { SignIn, SignUp } from "./pages/auth";
 
 const icon = {
@@ -32,20 +30,6 @@ export const routes = [
         path: "/profile",
         element: <Profile />,
       },
-      // {
-      //   icon: <TableCellsIcon {...icon} />,
-      //   name: "tables",
-      //   visible: true,
-      //   path: "/tables",
-      //   element: <Tables />,
-      // },
-      // {
-      //   icon: <BellIcon {...icon} />,
-      //   name: "notifactions",
-      //   visible: true,
-      //   path: "/notifactions",
-      //   element: <Notifications />,
-      // },
     ],
   },
   {

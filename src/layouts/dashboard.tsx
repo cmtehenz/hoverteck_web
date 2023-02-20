@@ -8,16 +8,15 @@ import {
   Footer,
 } from "../widgets/layout";
 import routes from "../routes";
-import { useMaterialTailwindController, setOpenConfigurator } from "../context";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { parseCookies } from "nookies";
+import { MaterialContext } from "../context/material";
 
 export function Dashboard() {
-  // const [controller, dispatch]= useMaterialTailwindController();
-  // const { sidenavType } = controller;
-  const sidenavType = "dark"
+  const { sidenavType } = useContext(MaterialContext);
+  
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     const {'airlogs.token': token} = parseCookies();
     if(!token){
@@ -27,24 +26,24 @@ export function Dashboard() {
 
   return (
     <div className="min-h-screen bg-blue-gray-50/50">
-      {/* <Sidenav
+      <Sidenav
         routes={routes}
         brandImg={
           sidenavType === "dark" ? "/img/logo-ct.png" : "/img/logo-ct-dark.png"
         }
-      /> */}
+      />
       <div className="p-4 xl:ml-80">
         <DashboardNavbar />
         <Configurator />
-        <IconButton
+        {/* <IconButton
           size="lg"
           color="white"
           className="fixed bottom-8 right-8 z-40 rounded-full shadow-blue-gray-900/10"
           ripple={false}
-          // onClick={() => setOpenConfigurator(dispatch, true)}
+          onClick={() => setOpenConfigurator(!openConfigurator)}
         >
           <Cog6ToothIcon className="h-5 w-5" />
-        </IconButton>
+        </IconButton> */}
         <Routes>
           {routes.map(
             ({ layout, pages }) =>

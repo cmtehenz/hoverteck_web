@@ -21,22 +21,18 @@ import {
   Bars3Icon,
   ArrowRightOnRectangleIcon
 } from "@heroicons/react/24/solid";
-import {
-  useMaterialTailwindController,
-} from "../../context";
-import { signOut } from "../../context/auth"; 
 import { destroyCookie } from "nookies";
 import { useContext, useEffect, useState } from "react";
 
 export function DashboardNavbar() {
   const [isAuth, setIsAuth ] = useState(true);
-  // const [controller ] = useMaterialTailwindController();
-  // const { fixedNavbar } = controller;
+  
+
   const fixedNavbar = true;
   const { pathname } = useLocation();
   const [layout, page] = pathname.split("/").filter((el) => el !== "");
   const { user, setUser } = useContext(AuthContext);
-  
+ 
   let navigate = useNavigate();
   
   useEffect(() =>{
@@ -56,7 +52,6 @@ export function DashboardNavbar() {
     
   }
 
-  // console.log(user)
   return (
     
     <Navbar
