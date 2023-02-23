@@ -53,6 +53,5 @@ export function Auth() {
   );
 }
 
-Auth.displayName = "/src/layout/Auth.jsx";
 
 export default Auth;

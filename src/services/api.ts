@@ -7,9 +7,11 @@ import { AuthTokenError } from "./errors/AuthTokenError";
 let isRefreshing = false;
 let failedRequestQueue = <any>[];
 
+console.log(import.meta.env.VITE_URL_API)
 export const api = axios.create({
-  baseURL: 'http://localhost:3333',
+  baseURL: import.meta.env.VITE_URL_API,
 });
+
 
 // export function setupApiClient(ctx = undefined) {
 //   let cookies = parseCookies(ctx);

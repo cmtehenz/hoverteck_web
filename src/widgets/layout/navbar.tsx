@@ -97,12 +97,9 @@ Navbar.defaultProps = {
   brandName: "Airlogs",
   action: (
     <a
-      href="https://www.creative-tim.com/product/material-tailwind-dashboard-react"
+      href="#"
       target="_blank"
     >
-      <Button variant="gradient" size="sm" fullWidth>
-        teste
-      </Button>
     </a>
   ),
 };
